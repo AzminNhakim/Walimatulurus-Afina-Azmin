@@ -28,7 +28,6 @@
     overflow-x: hidden;
   }
 
-  /* SPARKLE CANVAS */
   #sparkle-canvas {
     position: fixed;
     top: 0; left: 0;
@@ -37,7 +36,6 @@
     z-index: 999;
   }
 
-  /* COVER */
   #cover {
     position: fixed;
     top: 0; left: 0;
@@ -72,7 +70,6 @@
     50% { opacity: 1; transform: scale(2); }
   }
 
-  /* Cover deco rings */
   .cover-ring {
     position: absolute;
     border-radius: 50%;
@@ -173,11 +170,9 @@
   @keyframes bounce { 0%,100% { transform: translateY(0); } 50% { transform: translateY(8px); } }
   @keyframes fadeUp { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: translateY(0); } }
 
-  /* MAIN */
   #main-content { display: none; }
   #main-content.visible { display: block; }
 
-  /* NAV */
   .nav {
     position: sticky; top: 0; z-index: 50;
     background: rgba(8,18,36,0.94);
@@ -201,7 +196,6 @@
   }
   .nav-a:hover { color: var(--gold-light); border-bottom-color: var(--gold); }
 
-  /* HERO */
   .hero {
     min-height: 100vh;
     display: flex; flex-direction: column;
@@ -273,7 +267,6 @@
   }
   @keyframes revealUp { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
 
-  /* DIVIDER */
   .div-line {
     display: flex; align-items: center; gap: 12px;
     margin: 14px auto; max-width: 260px;
@@ -281,7 +274,6 @@
   .div-line .l { flex: 1; height: 1px; background: linear-gradient(90deg, transparent, var(--gold-light), transparent); }
   .div-line .d { width: 7px; height: 7px; background: var(--gold); transform: rotate(45deg); flex-shrink: 0; }
 
-  /* SECTION */
   .sec { padding: 64px 22px; max-width: 680px; margin: 0 auto; }
   .sec-title {
     font-family: 'Great Vibes', cursive;
@@ -296,11 +288,9 @@
   }
   .sep { height: 1px; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.07), transparent); max-width: 500px; margin: 0 auto; }
 
-  /* REVEAL */
   .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
   .reveal.visible { opacity: 1; transform: none; }
 
-  /* INVITE CARD */
   .invite-card {
     background: linear-gradient(150deg, rgba(26,58,110,0.35), rgba(10,20,45,0.55));
     border: 1px solid rgba(201,168,76,0.22);
@@ -339,7 +329,6 @@
     text-transform: uppercase; margin: 8px 0;
   }
 
-  /* DETAILS GRID */
   .detail-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; margin-bottom: 30px; }
   .d-item {
     text-align: center; padding: 22px 12px;
@@ -352,7 +341,6 @@
   .d-label { font-size: 8px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 5px; }
   .d-val { font-family: 'Playfair Display', serif; font-size: 13px; color: var(--white-soft); line-height: 1.5; }
 
-  /* COUNTDOWN */
   .cd-wrap { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin: 10px 0 30px; }
   .cd-unit { text-align: center; min-width: 66px; }
   .cd-num {
@@ -363,7 +351,6 @@
   .cd-lbl { display: block; font-size: 8px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-top: 5px; }
   .cd-sep { font-family: 'Playfair Display', serif; font-size: 38px; color: rgba(201,168,76,0.35); align-self: flex-start; margin-top: 6px; }
 
-  /* ATURCARA */
   .acara-list { list-style: none; position: relative; }
   .acara-list::before {
     content: ''; position: absolute; left: 62px; top: 14px; bottom: 14px;
@@ -374,7 +361,6 @@
   .acara-dot { width: 9px; height: 9px; background: var(--gold); border-radius: 50%; flex-shrink: 0; z-index: 1; box-shadow: 0 0 10px rgba(201,168,76,0.6); }
   .acara-ev { font-family: 'Playfair Display', serif; font-size: 14px; color: var(--white-soft); }
 
-  /* GALLERY */
   .gal-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 8px; margin-top: 18px; }
   .gal-item {
     aspect-ratio: 1; background: linear-gradient(135deg, rgba(26,58,110,0.45), rgba(8,18,36,0.8));
@@ -386,7 +372,6 @@
   .gal-item:hover { transform: scale(1.04); }
   .gal-item img { width: 100%; height: 100%; object-fit: cover; }
 
-  /* FORMS */
   .fg { margin-bottom: 14px; }
   .fl { display: block; font-size: 8px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 7px; }
   .fi, .fs, .ft {
@@ -410,8 +395,8 @@
     text-transform: uppercase; cursor: pointer; transition: 0.3s;
   }
   .btn-main:hover { background: linear-gradient(135deg, var(--navy-light), var(--blue-accent)); box-shadow: 0 0 28px rgba(42,82,152,0.4); border-color: var(--gold); }
+  .btn-main:disabled { opacity: 0.6; cursor: not-allowed; }
 
-  /* RSVP TOGGLE */
   .rsvp-tog { display: flex; gap: 10px; margin-bottom: 18px; }
   .rt-btn {
     flex: 1; padding: 11px; border: 1px solid rgba(255,255,255,0.15);
@@ -421,7 +406,6 @@
   }
   .rt-btn.active { background: rgba(42,82,152,0.35); border-color: var(--gold); color: var(--gold-light); }
 
-  /* GUESTBOOK */
   .gb-entry {
     background: rgba(255,255,255,0.03);
     border: 1px solid rgba(255,255,255,0.07);
@@ -431,8 +415,8 @@
   }
   .gb-name { font-family: 'Playfair Display', serif; font-size: 13px; color: var(--gold-light); margin-bottom: 5px; }
   .gb-msg { font-family: 'Cormorant Garamond', serif; font-size: 15px; line-height: 1.7; color: rgba(255,255,255,0.65); font-style: italic; }
+  .gb-time { font-size: 10px; color: rgba(255,255,255,0.25); margin-top: 6px; letter-spacing: 1px; }
 
-  /* LOCATION */
   .loc-card {
     text-align: center; padding: 30px 24px;
     background: rgba(255,255,255,0.03);
@@ -449,7 +433,6 @@
   }
   .map-btn:hover { background: rgba(201,168,76,0.08); border-color: var(--gold); }
 
-  /* CONTACT */
   .contact-row { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
   .c-card {
     flex: 1; min-width: 190px; max-width: 270px;
@@ -463,7 +446,6 @@
   .c-btn { display: inline-block; padding: 8px 22px; border: 1px solid rgba(201,168,76,0.3); color: var(--gold-light); font-size: 9px; letter-spacing: 2px; text-decoration: none; border-radius: 3px; transition: 0.3s; }
   .c-btn:hover { background: rgba(201,168,76,0.09); border-color: var(--gold); }
 
-  /* CALENDAR */
   .cal-card { text-align: center; padding: 28px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07); border-radius: 4px; margin-bottom: 20px; }
   .cal-day { font-size: 9px; letter-spacing: 5px; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
   .cal-num { font-family: 'Playfair Display', serif; font-size: 68px; color: white; line-height: 1; text-shadow: 0 0 40px rgba(74,128,217,0.3); }
@@ -471,13 +453,11 @@
   .cal-year { font-size: 11px; letter-spacing: 6px; color: rgba(255,255,255,0.35); margin-top: 5px; }
   .cal-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 20px; }
 
-  /* FOOTER */
   .footer { padding: 50px 22px 36px; text-align: center; border-top: 1px solid rgba(255,255,255,0.06); }
   .foot-hash { font-family: 'Great Vibes', cursive; font-size: 34px; color: var(--gold-light); margin-bottom: 12px; }
   .foot-dua { font-family: 'Cormorant Garamond', serif; font-size: 14px; color: rgba(255,255,255,0.4); font-style: italic; line-height: 1.7; margin-bottom: 18px; max-width: 380px; margin-left: auto; margin-right: auto; }
   .foot-credit { font-size: 9px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.25); }
 
-  /* TOAST */
   .toast {
     position: fixed; bottom: 28px; left: 50%;
     transform: translateX(-50%) translateY(80px);
@@ -489,6 +469,13 @@
     white-space: nowrap;
   }
   .toast.show { transform: translateX(-50%) translateY(0); }
+
+  .loading-wishes {
+    text-align: center; padding: 20px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14px; color: rgba(255,255,255,0.35);
+    letter-spacing: 2px;
+  }
 
   @media (max-width: 480px) {
     .detail-grid { grid-template-columns: 1fr 1fr; }
@@ -504,7 +491,6 @@
 <div id="cover">
   <div class="cover-bg-stars" id="bg-stars"></div>
 
-  <!-- Decorative rings -->
   <div class="cover-ring" style="width:500px;height:500px;left:50%;top:50%;transform:translate(-50%,-50%);--s:60s;"></div>
   <div class="cover-ring" style="width:350px;height:350px;left:50%;top:50%;transform:translate(-50%,-50%);--s:40s;border-color:rgba(74,128,217,0.1);"></div>
   <div class="cover-ring" style="width:200px;height:200px;left:50%;top:50%;transform:translate(-50%,-50%);--s:25s;"></div>
@@ -662,13 +648,13 @@
       <button class="rt-btn active" id="btn-hadir" onclick="setRSVP('hadir')">✓ &nbsp; Hadir</button>
       <button class="rt-btn" id="btn-tidak" onclick="setRSVP('tidak')">✕ &nbsp; Tidak Hadir</button>
     </div>
-    <div class="fg"><label class="fl">Nama Anda</label><input class="fi" type="text" placeholder="Nama penuh anda"></div>
-    <div class="fg"><label class="fl">Nombor Telefon</label><input class="fi" type="tel" placeholder="+60 12-345 6789"></div>
+    <div class="fg"><label class="fl">Nama Anda</label><input class="fi" id="rsvp-nama" type="text" placeholder="Nama penuh anda"></div>
+    <div class="fg"><label class="fl">Nombor Telefon</label><input class="fi" id="rsvp-tel" type="tel" placeholder="+60 12-345 6789"></div>
     <div id="hadir-fields">
-      <div class="fg"><label class="fl">Jumlah Kehadiran</label><select class="fs"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></div>
+      <div class="fg"><label class="fl">Jumlah Kehadiran</label><select class="fs" id="rsvp-jumlah"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></div>
       <div class="fg"><label class="fl">Jumlah Kanak-kanak (6–17 Tahun)</label><select class="fs"><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option></select></div>
     </div>
-    <button class="btn-main" onclick="submitRSVP()">✦ &nbsp; Hantar RSVP</button>
+    <button class="btn-main" id="rsvp-btn" onclick="submitRSVP()">✦ &nbsp; Hantar RSVP</button>
   </section>
 
   <div class="sep"></div>
@@ -682,11 +668,12 @@
       <div class="gb-name">🤲 Doa Majlis</div>
       <div class="gb-msg">Ya Allah, berkatilah majlis perkahwinan ini, limpahkan baraqah dan rahmat kepada kedua mempelai. Kurniakanlah mereka zuriat yang soleh dan solehah. Kekalkanlah jodoh mereka di dunia dan di akhirat.</div>
     </div>
-    <div id="gb-list"></div>
+
+    <div id="gb-list"><div class="loading-wishes">Memuatkan ucapan...</div></div>
 
     <div class="fg" style="margin-top:22px"><label class="fl">Nama Anda</label><input class="fi" id="wn" type="text" placeholder="Nama anda"></div>
     <div class="fg"><label class="fl">Ucapan & Doa</label><textarea class="ft" id="wm" placeholder="Tuliskan ucapan anda..."></textarea></div>
-    <button class="btn-main" onclick="submitWish()">✦ &nbsp; Hantar Ucapan</button>
+    <button class="btn-main" id="wish-btn" onclick="submitWish()">✦ &nbsp; Hantar Ucapan</button>
   </section>
 
   <div class="sep"></div>
@@ -727,11 +714,14 @@
     <div class="foot-credit">Kad Kahwin Digital · Dibuat dengan ❤️</div>
   </footer>
 
-</div><!-- end main-content -->
+</div>
 
 <div class="toast" id="toast"></div>
 
 <script>
+// ===== APPS SCRIPT URL =====
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwqJvylr6qA267X19f5sZlWd--s5H_AIC77YcQDgjqSL6I8aSPw_9g21pmM5HJDmPal5A/exec';
+
 // ===== SPARKLE ENGINE =====
 const canvas = document.getElementById('sparkle-canvas');
 const ctx = canvas.getContext('2d');
@@ -844,6 +834,7 @@ function openCard() {
   setTimeout(() => {
     main.classList.add('visible');
     initReveal();
+    loadWishes();
     for (let i = 0; i < 50; i++) {
       setTimeout(() => {
         particles.push(new Particle(Math.random()*innerWidth, Math.random()*innerHeight, true));
@@ -875,31 +866,105 @@ function countDown() {
 }
 setInterval(countDown, 1000); countDown();
 
-// RSVP
+// RSVP status
+let rsvpStatus = 'hadir';
 function setRSVP(t) {
+  rsvpStatus = t;
   document.getElementById('btn-hadir').classList.toggle('active', t==='hadir');
   document.getElementById('btn-tidak').classList.toggle('active', t==='tidak');
   document.getElementById('hadir-fields').style.display = t==='hadir' ? 'block' : 'none';
 }
-function submitRSVP() {
-  showToast('✦ RSVP dihantar! Terima kasih ✦');
-  burst();
+
+// Submit RSVP — simpan ke Google Sheets
+async function submitRSVP() {
+  const nama = document.getElementById('rsvp-nama').value.trim();
+  const tel = document.getElementById('rsvp-tel').value.trim();
+  const jumlah = rsvpStatus === 'hadir' ? document.getElementById('rsvp-jumlah').value : '-';
+
+  if (!nama || !tel) { showToast('Sila isi nama dan nombor telefon.'); return; }
+
+  const btn = document.getElementById('rsvp-btn');
+  btn.disabled = true;
+  btn.textContent = 'Menghantar...';
+
+  try {
+    await fetch(SCRIPT_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ type: 'rsvp', nama, telefon: tel, status: rsvpStatus, jumlah })
+    });
+    document.getElementById('rsvp-nama').value = '';
+    document.getElementById('rsvp-tel').value = '';
+    showToast('✦ RSVP dihantar! Terima kasih ✦');
+    burst();
+  } catch(err) {
+    showToast('Ralat. Cuba sekali lagi.');
+  }
+
+  btn.disabled = false;
+  btn.textContent = '✦   Hantar RSVP';
 }
 
-// Ucapan
-const wishes = [];
-function submitWish() {
+// Load ucapan dari Google Sheets
+async function loadWishes() {
+  try {
+    const res = await fetch(SCRIPT_URL + '?type=ucapan');
+    const data = await res.json();
+    renderWishes(data);
+  } catch(err) {
+    document.getElementById('gb-list').innerHTML = '';
+  }
+}
+
+function renderWishes(data) {
+  const list = document.getElementById('gb-list');
+  if (!data || data.length === 0) {
+    list.innerHTML = '';
+    return;
+  }
+  list.innerHTML = data.slice().reverse().map(w =>
+    `<div class="gb-entry">
+      <div class="gb-name">✦ ${escHtml(w.nama)}</div>
+      <div class="gb-msg">${escHtml(w.ucapan)}</div>
+      <div class="gb-time">${w.timestamp || ''}</div>
+    </div>`
+  ).join('');
+}
+
+function escHtml(str) {
+  return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+// Submit ucapan — simpan ke Google Sheets
+async function submitWish() {
   const n = document.getElementById('wn').value.trim();
   const m = document.getElementById('wm').value.trim();
   if (!n || !m) { showToast('Sila isi nama dan ucapan.'); return; }
-  wishes.push({n,m});
-  document.getElementById('gb-list').innerHTML = wishes.slice().reverse().map(w =>
-    `<div class="gb-entry"><div class="gb-name">✦ ${w.n}</div><div class="gb-msg">${w.m}</div></div>`
-  ).join('');
-  document.getElementById('wn').value = '';
-  document.getElementById('wm').value = '';
-  showToast('✦ Ucapan dihantar! Terima kasih ✦');
-  burst();
+
+  const btn = document.getElementById('wish-btn');
+  btn.disabled = true;
+  btn.textContent = 'Menghantar...';
+
+  try {
+    await fetch(SCRIPT_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ type: 'ucapan', nama: n, ucapan: m })
+    });
+    document.getElementById('wn').value = '';
+    document.getElementById('wm').value = '';
+    showToast('✦ Ucapan dihantar! Terima kasih ✦');
+    burst();
+    // Reload ucapan selepas 2 saat untuk tunjuk entry baru
+    setTimeout(loadWishes, 2000);
+  } catch(err) {
+    showToast('Ralat. Cuba sekali lagi.');
+  }
+
+  btn.disabled = false;
+  btn.textContent = '✦   Hantar Ucapan';
 }
 
 function burst() {
